@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application PreferredLanguage="es" Title="Via Mobile" Company="Developer Express Inc." Copyright="Copyright (C) 2016 {0:Company} ALL RIGHTS RESERVED">
+  <ActionDesign>
+    <ActionToContainerMapping>
+      <ActionContainer Id="Edit">
+        <ActionLink ActionId="Signature" IsNewNode="True" Removed="True" />
+      </ActionContainer>
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default" Caption="Plataforma">
+        <Items>
+          <Item Id="AboutInfo" ImageName="BO_Task_Mobile" ViewId="ENC_ENTREGAS_ListView" />
+          <Item Id="MyDetails" Removed="True" />
+          <Item Id="PermissionPolicyRole_ListView" Removed="True" />
+          <Item Id="PermissionPolicyUser_ListView" Removed="True" />
+          <Item Id="Retirar" ViewId="AboutInfo_DetailView" Caption="Retirar" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="18.1.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <ViewItems>
+    <PropertyEditor Name="PropertyEditors">
+      <RegisteredPropertyEditor PropertyType="System.Boolean" DefaultDisplayFormatMobile="" DefaultEditMaskMobile="" />
+      <RegisteredPropertyEditor PropertyType="System.Byte[]" DefaultDisplayFormatMobile="" DefaultEditMaskMobile="" />
+      <RegisteredPropertyEditor PropertyType="System.Drawing.Image" DefaultDisplayFormatMobile="" DefaultEditMaskMobile="" />
+      <RegisteredPropertyEditor PropertyType="System.String" DefaultDisplayFormatMobile="" DefaultEditMaskMobile="" />
+    </PropertyEditor>
+  </ViewItems>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView" MobileVisible="True" DefaultFocusedItem="UserName">
+      <Items>
+        <StaticText Id="LogonText" HorizontalAlign="Center" />
+        <StaticText Id="PasswordHint" Text="Welcome! Please enter your user name and password below." HorizontalAlign="Center" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="RootGroup" RelativeSize="100">
+            <LayoutGroup Id="ImageGroup" ShowCaption="False" Direction="Vertical" Index="0" RelativeSize="9.3394077448747161" IsNewNode="True" Removed="True">
+              <LayoutItem Id="LogonText" ViewItem="LogonText" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="EditorsGroup" RelativeSize="90.66059225512528" Index="1">
+              <LayoutGroup Id="Editors" Index="0" RelativeSize="100">
+                <LayoutItem Id="UserName" Index="0" RelativeSize="10.804020100502513" />
+                <LayoutItem Id="Password" Index="1" RelativeSize="8.5427135678391952" />
+                <LayoutItem Id="PasswordHint" ViewItem="PasswordHint" Index="2" RelativeSize="80.653266331658287" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ENC_ENTREGAS_DetailView" MobileVisible="True" Caption="Entregar">
+      <Items>
+        <PropertyEditor Id="CONFORME" ImageForFalse="" ImageForTrue="" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutItem Id="Photo" ShowCaption="True" ViewItem="Photo" Index="0" RelativeSize="54.383735705209659" CaptionLocation="Top" IsNewNode="True" />
+            <LayoutItem Id="CONFORME" ViewItem="CONFORME" Index="1" RelativeSize="4.066073697585769" IsNewNode="True" />
+            <LayoutGroup Id="ENC_ENTREGAS" RelativeSize="13.211845102505695" Direction="Vertical" Index="1" Removed="True">
+              <LayoutGroup Id="ENC_ENTREGAS_col1" RelativeSize="100" Direction="Horizontal">
+                <LayoutItem Id="COD_ENCOMIENDA" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="RECIBE" RelativeSize="50" Index="0" Removed="True" />
+                <LayoutItem Id="RUT" RelativeSize="36.507936507936506" Index="0" Removed="True" />
+                <LayoutItem Id="ID_ENTREGA" RelativeSize="23.668639053254438" Removed="True" />
+                <LayoutItem Id="Photo" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ENC_ENTREGAS_col2" RelativeSize="50.137741046831955" Caption="ENC_ENTREGAS_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="CONFORME" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="ESTADO" RelativeSize="23.668639053254438" Removed="True" />
+                <LayoutItem Id="FECHA_RECEPCION" RelativeSize="18.934911242603551" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutItem Id="RUT" ViewItem="RUT" Index="2" RelativeSize="4.3202033036848793" IsNewNode="True" />
+            <LayoutItem Id="RECIBE" ViewItem="RECIBE" Index="3" RelativeSize="4.3202033036848793" IsNewNode="True" />
+            <LayoutItem Id="COD_ENCOMIENDA" ViewItem="COD_ENCOMIENDA" Index="4" RelativeSize="4.3202033036848793" IsNewNode="True" />
+            <LayoutItem Id="COMENTARIO" ViewItem="COMENTARIO" Index="5" RelativeSize="11.689961880559086" IsNewNode="True" />
+            <LayoutItem Id="FIRMA" ViewItem="FIRMA" Index="6" RelativeSize="16.899618805590851" ShowCaption="True" CaptionLocation="Top" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="COMENTARIO" Direction="Horizontal" RelativeSize="61.866666666666667" Removed="True">
+            <LayoutItem Id="COMENTARIO" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ENC_ENTREGAS_ListView" MobileVisible="True" Caption="Lista de Entrega">
+      <RowLayout>
+        <RowLayoutItem Id="Photo" Removed="True" />
+        <RowLayoutItem Id="Rut" Column="RUT" ShowCaption="False" IsNewNode="True" />
+      </RowLayout>
+    </ListView>
+  </Views>
+</Application>
